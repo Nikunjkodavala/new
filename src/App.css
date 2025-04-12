@@ -1,0 +1,27 @@
+ /* Button css */
+
+
+
+
+  /* Scroll Bar */
+/* Apply styles only to elements inside the sidebar */
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 80px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(20deg, #00aeff, #a68eff);
+    border-radius: 80px;
+  }
+
+  /* Firefox Support */
+  .custom-scrollbar {
+    scrollbar-color: #00aeff #a68eff;
+  }
+}

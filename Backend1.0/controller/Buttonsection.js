@@ -18,7 +18,8 @@ exports.basicbuttom = async (req, res) => {
         res.status(200).json(
             { 
                 success:true,
-                message: "Button Created Successfully" 
+                message: "Button Created Successfully",
+                data:magicbutton
             }
         );
         

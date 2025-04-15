@@ -1,7 +1,8 @@
-const MagicButton = require('../models/MagicButton');
+const MagicButton = require('../Model/basicbtn');
+
 exports.basicbuttom = async (req, res) => {
      try {
-        const { name, color, bgcolor, size, btncode } = req.body;
+        const { name, color, bgcolor, size, btncode} = req.body;
         if (!name || !color || !bgcolor || !btncode) {
             return res.status(400).json(
                 { 
@@ -31,3 +32,40 @@ exports.basicbuttom = async (req, res) => {
         );
      }
 }
+
+exports.incrementLikeAndView = async (req, res) => {
+    try {
+        const { id } = req.params;
+        if (!id) {
+            return res.status(400).json({
+                success: false,
+                message: "Button ID is required"
+            });
+        }
+
+        const magicbutton = await MagicButton.findById(id);
+        if (!magicbutton) {
+            return res.status(404).json({
+                success: false,
+                message: "Button not found"
+            });
+        }
+
+        magicbutton.likes = (magicbutton.likes || 0) + 1;
+        magicbutton.views = (magicbutton.views || 0) + 1;
+
+        await magicbutton.save();
+
+        res.status(200).json({
+            success: true,
+            message: "Likes and views incremented successfully",
+            data: magicbutton
+        });
+    } catch (error) {
+        console.log("Internal Server Error", error);
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error"
+        });
+    }
+};

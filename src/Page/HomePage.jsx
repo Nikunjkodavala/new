@@ -69,6 +69,7 @@ const HomePage = () => {
   return (
     <div className='w-full bg-gradient-to-t to-purple-600 from-black text-white'>
         <div className='flex flex-col items-center text-center'>
+            
             <div className='mx-auto flex flex-col items-center gap-y-5 my-22 px-5'>
                 
                 <h1 className='text-4xl sm:text-5xl max-w-3xl leading-16'>

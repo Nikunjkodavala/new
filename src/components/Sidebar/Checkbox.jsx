@@ -12,7 +12,7 @@ const CustomCard = () => {
 
   return (
     <div className="flex flex-col ">
-      <div className="lg:w-72  group h-44 w-44 border-2 border-purple-400 lg:h-72 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
+      <div className="lg:w-72  group h-44 w-44  lg:h-72 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
       <label className="flex items-center space-x-4 cursor-pointer">
       <input
         type="checkbox"
@@ -22,12 +22,12 @@ const CustomCard = () => {
       />
       
     </label>
-       <div className="flex lg:w-11/12 w-9/12 border-white  lg:justify-between justify-center items-center max-sm:px-1 absolute top-2 left-3 ">
+       <div className="flex lg:w-11/12 w-9/12 border-white  lg:justify-between justify-center items-center max-sm:px-1 absolute top-2  ">
        <div className=" flex flex-row items-center gap-x-2 invisible group-hover:visible transition-all duration-200 ease-in-out">
             <Link to="/cart/getcode" className="flex items-center gap-x-2">GetCode <FaCode size={20} /></Link>
         </div>
 
-        <div className="flex lg:gap-x-4 gap-x-1.5">
+        <div className="flex lg:gap-x-4 gap-x-4">
           {/* Save Button */}
           <button
             onClick={() => setSaved(!saved)}

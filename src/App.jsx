@@ -15,6 +15,7 @@ import Checkbox from './components/Sidebar/Checkbox';
 import ToggelButton from './components/Sidebar/ToggelButton';
 import Loader from './components/Sidebar/Loaders';
 import Card from './components/Sidebar/Card';
+import Form from './components/Sidebar/Form';
 
 
 
@@ -33,6 +34,7 @@ function App() {
                 <Route path='toggel' element={<ToggelButton/>} />
                 <Route path='loader' element={<Loader/>} />
                 <Route path='card' element={<Card/>} />
+                <Route path='form' element={<Form/>} />
                 <Route path='getcode' element={<GetCode/>} />
                 <Route path='ProjectCategories' element={<ProjectCategories/>} />
                 <Route path="side" element={<Sidebar/>} />

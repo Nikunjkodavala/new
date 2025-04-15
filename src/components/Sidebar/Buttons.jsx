@@ -15,12 +15,12 @@ const CustomCard = () => {
         <button className="bg-gradient-to-b from-cyan-400 to-cyan-700 text-white px-6 py-2 rounded-lg shadow-md font-semibold hover:opacity-90 transition">
           Button
         </button>
-       <div className="flex lg:w-11/12 w-9/12 border-white  lg:justify-between justify-center items-center max-sm:px-1 absolute top-2 left-3 ">
+       <div className="flex lg:w-11/12 w-9/12 border-white  lg:justify-between justify-center items-center max-sm:px-1 absolute top-2 ">
        <div className=" flex flex-row items-center gap-x-2 invisible group-hover:visible transition-all duration-200 ease-in-out">
             <Link to="/cart/getcode" className="flex items-center gap-x-2">GetCode <FaCode size={20} /></Link>
         </div>
 
-        <div className="flex lg:gap-x-4 gap-x-1.5">
+        <div className="flex lg:gap-x-4 gap-x-4">
           {/* Save Button */}
           <button
             onClick={() => setSaved(!saved)}

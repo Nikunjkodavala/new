@@ -79,9 +79,9 @@ const HomePage = () => {
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cumque sunt totam vel repellendus quas quos debitis, mollitia officia aperiam fugiat minima, magni explicabo.
                 </h3>
                 <div className='flex flex-col sm:flex-row items-center gap-x-10 mt-6'>
-                     <button type="button" className='py-2 flex items-center gap-x-3 px-6 border rounded-md bg-purple-500 text-white uppercase tracking-wide'>
-                         <MdDashboardCustomize size={30}/> <a href="/cart">Use our Components</a>
-                     </button>
+                <a href="/cart"><button type="button" className='py-2 flex items-center gap-x-3 px-6 cursor-pointer border rounded-md bg-purple-500 text-white uppercase tracking-wide'>
+                         <MdDashboardCustomize size={30}/> Use our Components
+                     </button></a>
                      <div className='flex gap-x-5 mt-5 sm:mt-0'>
                          <span><FaReact size={30}/></span>
                          <span><RiTailwindCssFill size={30}/></span>

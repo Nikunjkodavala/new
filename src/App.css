@@ -1,0 +1,39 @@
+ /* Button css */
+
+ /* .custom-background {
+  background: linear-gradient(179deg, rgba(0, 0, 0, 1), rgba(152, 16, 250, 1));
+-webkit-background: linear-gradient(179deg, rgba(0, 0, 0, 1), rgba(152, 16, 250, 1));
+-moz-background: linear-gradient(179deg, rgba(0, 0, 0, 1), rgba(152, 16, 250, 1));
+ } */
+
+ .custom-background {
+  background: #41295b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ }
+
+
+
+  /* Scroll Bar */
+/* Apply styles only to elements inside the sidebar */
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 80px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(20deg, #00aeff, #a68eff);
+    border-radius: 80px;
+  }
+
+  /* Firefox Support */
+  .custom-scrollbar {
+    scrollbar-color: #00aeff #a68eff;
+  }
+}

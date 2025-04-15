@@ -139,7 +139,7 @@ const projects = [
 
 const Footer = () => {
   return (
-    <div className='bg-gray-800 text-white py-10 px-5'>
+    <div className='bg-gray-800 text-white py-10 px-5 border-2 border-blue-500'>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-11/12 mx-auto'>
         {/* Logo and Description */}
         <div className='flex flex-col gap-4'>

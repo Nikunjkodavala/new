@@ -1,147 +1,137 @@
-// import React, { useState } from "react";
-// import { Outlet } from "react-router-dom";
+
+// import React from "react";
+// import { Link, Outlet, useLocation } from "react-router-dom";
 
 // const Sidebar = () => {
-//     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+//   const location = useLocation();
 
-//     const navItems = [
-//         { name: "Navbars", href: "#" },
-//         { name: "Buttons", href: "#" },
-//         { name: "Loader", href: "#" },
-//         { name: "Forms", href: "#" },
-//         { name: "Carts", href: "#" },
-//         { name: "Footers", href: "#" },
-//         { name: "Timeline", href: "#" },
-//         { name: "Design Text Color", href: "#" },
-//         { name: "Review Page", href: "#" },
-//         { name: "Page Not Found - 404", href: "#" },
-//         { name: "Internship Certificate", href: "#" },
-//         { name: "Project", href: "#" },
-//         { name: "Backend Node JS Code", href: "#" },
-//     ];
+//   const navItems = [
+//     { name: "Navbars", href: "/" },
+//     { name: "Buttons", href: "/cart/button" },
+//     { name: "Forms", href: "/cart/side" },
+//     { name: "Get Code", href: "/cart/getcode" },
+//     { name: "Project Categories", href: "/cart/ProjectCategories" },
+//     { name: "Projects", href: "/Projects" },
+//   ];
 
-//     return (
-//         <div className="flex mt-[60px]">
-//             {/* Sidebar */}
-//             <div
-//                 className={`${
-//                     isSidebarOpen ? "block" : "hidden"
-//                 } md:block flex flex-col  border-2 border-red-500 h-screen bg-gray-800 text-white w-64 md:w-72`}
-//             >
-//                 <div className="p-4 text-lg font-bold border-b border-gray-700">
-//                     Sidebar
-//                 </div>
-//                 <nav className="flex-1 p-4">
-//                     <ul className="space-y-4">
-//                         {navItems.map((item, index) => (
-//                             <li key={index}>
-//                                 <button
-//                                     onClick={() => alert(`Navigating to ${item.name}`)}
-//                                     className="block w-full text-left p-2 rounded hover:bg-gray-700 transition"
-//                                 >
-//                                     {item.name}
-//                                 </button>
-//                             </li>
-//                         ))}
-//                     </ul>
-//                 </nav>
-//             </div>
+//   return (
+//     <div className="flex flex-col md:flex-row">
+//       {/* ✅ Mobile horizontal tabs */}
+//       <div className="md:hidden flex overflow-x-auto max-sm:mt-[65px] space-x-2 px-2 py-3 bg-gray-900 border-b border-purple-700 scrollbar-thin scrollbar-thumb-purple-600 scrollbar-track-gray-800">
+//         {navItems.map((item) => (
+//           <Link
+//             key={item.name}
+//             to={item.href}
+//             className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+//               location.pathname === item.href
+//                 ? "bg-purple-600 text-white"
+//                 : "bg-gray-800 text-white hover:bg-gray-700"
+//             }`}
+//           >
+//             {item.name}
+//           </Link>
+//         ))}
+//       </div>
 
-//             {/* Mobile Menu Toggle */}
-//             <button
-//                 className="md:hidden fixed top-4 left-4 bg-gray-800 text-white p-3 rounded-md"
-//                 onClick={() => setIsSidebarOpen(isSidebarOpen)}
-//             >
-//                 {isSidebarOpen ? "Close Menu" : "Open Menu"}
-//             </button>
-
-//             {/* Main Content */}
-//             <div className="w-full">
-//                 <Outlet />
-//             </div>
+//       {/* ✅ Desktop sidebar */}
+//       <div className="hidden md:block w-[250px] bg-gray-900 mt-[73px] text-white border-r-2 border-purple-700 min-h-screen sticky top-[72px] self-start">
+//         <div className="p-4 border-b border-purple-500 font-bold text-lg">
+//           Sidebar
 //         </div>
-//     );
+
+//         <div className="p-4 space-y-2">
+//           {navItems.map((item) => (
+//             <Link
+//               key={item.name}
+//               to={item.href}
+//               className={`block p-2 rounded-lg transition-all duration-200 ${
+//                 location.pathname === item.href
+//                   ? "bg-purple-600 text-white"
+//                   : "hover:bg-gray-700"
+//               }`}
+//             >
+//               {item.name}
+//             </Link>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* ✅ Main Content */}
+//       <div className=" custom-background text-white p-4 min-h-screen border-4 border-amber-600">
+//         <Outlet />
+//       </div>
+//     </div>
+//   );
 // };
 
 // export default Sidebar;
 
 
-import React, { useState } from "react";
-import { Outlet, useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const location = useLocation();
+  const location = useLocation();
 
-    const navItems = [
-        { name: "Navbars", href: "#" },
-        { name: "Buttons", href: "/cart/" },
-        { name: "Loader", href: "#" },
-        { name: "Forms", href: "/cart/side" },
-        { name: "Carts", href: "#" },
-        { name: "Footers", href: "#" },
-        { name: "Timeline", href: "#" },
-        { name: "Design Text Color", href: "#" },
-        { name: "Review Page", href: "#" },
-        { name: "Page Not Found - 404", href: "#" },
-        { name: "Internship Certificate", href: "#" },
-        { name: "Project", href: "#" },
-        { name: "Backend Node JS Code", href: "#" },
-    ];
+  const navItems = [
+    { name: "Buttons", href: "/cart/button" },
+    { name: "Checkboxes", href: "/cart/checkbox" },
+    { name: "Toggel", href: "/cart/toggel" },
+    { name: "Loaders", href: "/cart/loader" },
+    { name: "Card", href: "/cart/card" },
+    { name: "Forms", href: "/cart/form" },
+    { name: "Project Categories", href: "/cart/ProjectCategories" },
+    { name: "Projects", href: "/Projects" },
+  ];
 
-    return (
-        <div className="flex max-sm:mt-[60px] bg-gray-500">
-            <div className="relative p-[2px] rounded-xl border-purple-700 border-2">
-    <div className="bg-gray-800 rounded-xl p-5 text-white">
-         {/* Sidebar */}
-         <div>
-            <div
-                className={`${
-                    isSidebarOpen ? "block" : ""
-                } md:block flex flex-col  h-full bg-gray-800 text-white w-64 md:w-72`}
-            >
-                
-                <div className="p-4 text-lg font-bold border-b border-gray-700">
-                    Sidebar
-                </div>
-                <nav className="flex-1 p-4 h-[80vh] overflow-y-scroll">
-                    <ul className="space-y-4">
-                        {navItems.map((item) => (
-                            <li key={item.name}> {/* Use item.name as the unique key */}
-                                <Link to={item.href}>
-                                <button
-                                    className="block w-full text-left p-2 rounded hover:bg-gray-700 transition"
-                                >
-                                    {item.name}
-                                </button>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-                </div>
-            </div>
+  return (
+    <div className="flex flex-col md:flex-row w-full">
+      {/* ✅ Mobile horizontal tabs */}
+      <div className="md:hidden flex overflow-x-auto  space-x-2 px-2 py-3 bg-gray-900 border-b border-purple-700 scrollbar-thin scrollbar-thumb-purple-600 scrollbar-track-gray-800">
+        {navItems.map((item) => (
+          <Link
+            key={item.name}
+            to={item.href}
+            className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              location.pathname === item.href
+                ? "bg-purple-600 text-white"
+                : "bg-gray-800 text-white hover:bg-gray-700"
+            }`}
+          >
+            {item.name}
+          </Link>
+        ))}
+      </div>
 
-            {/* Mobile Menu Toggle */}
-            <button
-                className="md:hidden fixed top-4 left-4 bg-gray-800 text-white p-3 rounded-md"
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)} // Correct the toggle function
-            >
-                {isSidebarOpen ? "Close Menu" : "Open Menu"}
-            </button>
-
-           
-    </div>
-    
-   </div>
-    {/* Main Content */}
-    <div className="w-full">
-                <Outlet />
-            </div>
-
+      {/* ✅ Desktop sidebar */}
+      <div className="hidden md:block w-[250px] bg-gray-900  text-white border-r-2 border-purple-700 min-h-screen sticky top-[72px] self-start">
+        <div className="p-4 border-b border-purple-500 font-bold text-lg">
+          Sidebar
         </div>
-    );
+
+        <div className="p-4 space-y-2">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className={`block p-2 rounded-lg transition-all duration-200 ${
+                location.pathname === item.href
+                  ? "bg-purple-600 text-white"
+                  : "hover:bg-gray-700"
+              }`}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* ✅ Main Content */}
+      <div className="flex-1 bg-[#171717] px-1   text-white p-4 min-h-screen ">
+        <Outlet />
+      </div>
+    </div>
+  );
 };
 
 export default Sidebar;

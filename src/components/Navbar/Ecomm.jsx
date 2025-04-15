@@ -33,7 +33,7 @@ const Ecomm = () => {
   ];
 
   return (
-    <div className="fixed top-0 w-full z-[50] bg-gray-800 text-purple-500 border-b border-indigo-500">
+    <div className="sticky top-0 w-full z-[50] bg-gray-800 text-purple-500 border-b border-indigo-500">
       <div className="w-11/12 mx-auto  flex justify-between items-center py-4 relative">
         {/* Logo */}
         <a href="/">

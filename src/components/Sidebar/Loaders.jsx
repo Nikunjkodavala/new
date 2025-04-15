@@ -10,7 +10,7 @@ const CustomCard = () => {
   const [saved, setSaved] = useState(false);
   return (
     <div className="flex flex-col ">
-      <div className="lg:w-72  group h-44 w-44  lg:h-72 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
+      <div className="lg:w-72  group h-44 w-44  lg:h-72 border-2 border-purple-400 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
        <div className="flex justify-center items-center h-20">
       <div className="w-10 h-10 border-4 border-cyan-500 border-dashed rounded-full animate-spin"></div>
       </div>

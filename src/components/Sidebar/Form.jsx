@@ -151,7 +151,7 @@ const CustomCard = () => {
   return (
     <div>
         <div
-      className="lg:w-150 h-200 w-98 lg:h-130 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative"
+      className="lg:w-150 h-200 w-98 lg:h-130 bg-[#212121] border-2 border-purple-400 overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

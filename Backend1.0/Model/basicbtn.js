@@ -24,6 +24,15 @@ const magicbuttonSchema = new mongoose.Schema({
         type: Date,
         default: Date.now()
     },
+    Like:{
+        type: Number,
+        default: 0
+    },
+    View:{
+        type:Number,
+        default:0,
+        required:true
+    },
     updatedAt:{
         type: Date,
         default: Date.now()

@@ -70,3 +70,28 @@ exports.incrementLikeAndView = async (req, res) => {
         });
     }
 };
+
+exports.getAllButtons = async (req, res) => {
+    try {
+        const buttons = await MagicButton.find();
+
+        if (!buttons || buttons.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "No buttons found"
+            });
+        }
+          
+        res.status(200).json({
+            success: true,
+            message: "Buttons fetched successfully",
+            data: buttons
+        });
+    } catch (error) {
+        console.log("Internal Server Error", error);
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error"
+        });
+    }
+}

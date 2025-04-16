@@ -104,7 +104,7 @@ const CustomCard = () => {
       onMouseLeave={() => setIsHovered(false)}
       
     >
-      <div className="lg:w-98 h-98 w-98 lg:h-98 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
+      <div className="lg:w-98 h-98 w-98 lg:h-98 border-2 border-purple-400 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
         <div 
         onMouseEnter={() => setIsButtonVisible(true)}
         onMouseLeave={() => setIsButtonVisible(false)}

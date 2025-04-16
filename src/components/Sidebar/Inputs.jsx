@@ -8,24 +8,25 @@ import { FaCode } from "react-icons/fa";
 const CustomCard = () => {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
-  const [enabled, setEnabled] = useState(false); // State for toggle button
 
   return (
     <div className="flex flex-col ">
-      <div className="lg:w-72  group h-44 w-44  lg:h-72 border-2 border-purple-400 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
-      <button
-        onClick={() => setEnabled(!enabled)}
-        className={`w-14 h-8 flex items-center rounded-full p-1 transition-colors duration-300 ${
-          enabled ? "bg-green-500" : "bg-gray-400"
-        }`}
-      >
-        <div
-          className={`w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
-            enabled ? "translate-x-6" : "translate-x-0"
-          }`}
+      <div className="lg:w-72  group h-44 w-44 border-2 border-purple-400 lg:h-72 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
+      <div className="relative w-full max-w-[200px]">
+        <input
+            required
+            type="text"
+            name="text"
+            className="peer h-[45px] w-full px-3 pt-5 pb-1 text-sm text-white rounded-md bg-transparent outline-none border-none shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4)] focus:shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4),inset_3px_3px_10px_rgba(0,0,0,1),inset_-1px_-1px_6px_rgba(255,255,255,0.4)] transition-all"
         />
-      </button>
-       <div className="flex lg:w-11/12 w-9/12 border-white  lg:justify-between justify-center items-center max-sm:px-1 absolute top-2">
+        <label
+            className="absolute left-3 top-3 text-white text-[15px] pointer-events-none transition-all duration-300 peer-placeholder-shown:top-3.5 peer-placeholder-shown:left-3 peer-placeholder-shown:text-[15px] peer-focus:top-[-20px] peer-focus:left-1 peer-focus:text-sm"
+        >
+            Username
+        </label>
+        </div>
+
+       <div className="flex lg:w-11/12 w-9/12 border-white  lg:justify-between justify-center items-center max-sm:px-1 absolute top-2 ">
        <div className=" flex flex-row items-center gap-x-2 invisible group-hover:visible transition-all duration-200 ease-in-out">
             <Link to="/cart/getcode" className="flex items-center gap-x-2">GetCode <FaCode size={20} /></Link>
         </div>

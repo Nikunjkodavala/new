@@ -80,6 +80,8 @@ const Sidebar = () => {
     { name: "Loaders", href: "/cart/loader" },
     { name: "Card", href: "/cart/card" },
     { name: "Forms", href: "/cart/form" },
+    { name: "Inputs", href: "/cart/input" },
+    { name: "Radio Buttons", href: "/cart/radio" },
     { name: "Project Categories", href: "/cart/ProjectCategories" },
     { name: "Projects", href: "/Projects" },
   ];
@@ -127,7 +129,7 @@ const Sidebar = () => {
       </div>
 
       {/* ✅ Main Content */}
-      <div className="flex-1 bg-[#171717] px-1   text-white p-4 min-h-screen ">
+      <div className="flex-1 custom-background px-1   text-white p-4 min-h-screen ">
         <Outlet />
       </div>
     </div>

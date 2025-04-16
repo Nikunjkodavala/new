@@ -269,7 +269,7 @@ const CustomCard = () => {
 const CustomCardGrid = () => {
     return (
       <div className="min-h-screen mt-[53px] p-6 flex justify-center items-center">
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">
           {[...Array(30)].map((_, index) => (
             <CustomCard key={index} />
           ))}

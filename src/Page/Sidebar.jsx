@@ -82,6 +82,8 @@ const Sidebar = () => {
     { name: "Forms", href: "/cart/form" },
     { name: "Inputs", href: "/cart/input" },
     { name: "Radio Buttons", href: "/cart/radio" },
+    { name: "Tooltips Button", href: "/cart/tooltip" },
+    { name: "404 Pages", href: "/cart/tooltip" },
     { name: "Project Categories", href: "/cart/ProjectCategories" },
     { name: "Projects", href: "/Projects" },
   ];

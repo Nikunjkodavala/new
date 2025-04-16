@@ -16,6 +16,9 @@ import ToggelButton from './components/Sidebar/ToggelButton';
 import Loader from './components/Sidebar/Loaders';
 import Card from './components/Sidebar/Card';
 import Form from './components/Sidebar/Form';
+import Inputs from './components/Sidebar/Inputs';
+import RadioButton from './components/Sidebar/RadioButton'
+import ToolTips from './components/Sidebar/ToolTips';
 
 
 
@@ -35,6 +38,9 @@ function App() {
                 <Route path='loader' element={<Loader/>} />
                 <Route path='card' element={<Card/>} />
                 <Route path='form' element={<Form/>} />
+                <Route path='input' element={<Inputs/>} />
+                <Route path='radio' element={<RadioButton/>} />
+                <Route path='tooltip' element={<ToolTips/>} />
                 <Route path='getcode' element={<GetCode/>} />
                 <Route path='ProjectCategories' element={<ProjectCategories/>} />
                 <Route path="side" element={<Sidebar/>} />

@@ -1,30 +1,3 @@
-// import React, { useState } from "react";
-
-// const GetCode = () => {
-
-//   const [html, Sethtml] = useState();
-//   const [css, Setcss] = useState();
-
-
-//   return (
-//     <div className="flex lg:flex-row gap-x-8 sm:flex lg:h-[700px] flex-col ">
-//       <div className="bg-[#1E1E1E]  rounded-lg lg:w-[50%] text-justify">
-//             <div className="flex bg-gray-600  gap-4   h-10 rounded-lg">
-//               <h1 className="text-xl font-bold text-white px-6 my-auto">HTML</h1>
-//               <h1 className="text-xl font-bold text-white  my-auto">CSS</h1>
-//             </div>
-//       </div>
-//       <div className="bg-[#212121] p-4 rounded-lg lg:w-[50%] text-justify">
-//       <button className="bg-gradient-to-b from-cyan-400 to-cyan-700 text-white px-6 py-2 rounded-lg shadow-md font-semibold hover:opacity-90 transition">
-//           Button
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default GetCode;
-
 import React, { useState } from "react";
 import { RiHtml5Fill } from "react-icons/ri";
 import { FaCss3 } from "react-icons/fa6";
@@ -179,7 +152,7 @@ const GetCode = () => {
     }`;
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6 p-4 lg:h-screen  text-white ">
+    <div className="flex flex-col lg:flex-row gap-6 p-4 lg:h-[750px]  text-white ">
       {/* Left Side: Code Editor */}
       <div className="w-full lg:w-1/2 rounded-lg bg-[#1E1E1E] border border-gray-700 shadow-md">
         {/* Tab Buttons */}
@@ -198,19 +171,19 @@ const GetCode = () => {
           </button>
           <button
             onClick={() => setActiveTab("react")}
-            className={`${getTabStyle("react")} flex items-center gap-x-2`}
+            className={`${getTabStyle("react")} flex items-center gap-x-2 sm:  flex-col`}
           >
             REACT <SiReact size={24} className="flex  text-[#61DBFB]" />  + TAILWINDCSS <RiTailwindCssFill size={24} className="flex  text-sky-400" />
           </button>
         </div>
 
         {/* Code Editors */}
-        <div className="p-4">
+        <div className="flex p-4 ">
           {activeTab === "html" && (
             <textarea
               value={html}
               onChange={(e) => setHtml(e.target.value)}
-              className="w-full h-64 bg-black text-green-400 font-mono p-3 rounded focus:outline-none"
+              className="w-full  lg:h-125 max-sm:h-125 bg-black text-green-400 font-mono p-3 rounded focus:outline-none"
             />
           )}
           {activeTab === "css" && (
@@ -224,7 +197,7 @@ const GetCode = () => {
             <textarea
               value={reactCode}
               onChange={(e) => setReactCode(e.target.value)}
-              className="w-full h-64 bg-black text-blue-400 font-mono p-3 rounded focus:outline-none"
+              className="w-full h-125 bg-black text-blue-400 font-mono p-3 rounded focus:outline-none"
             />
           )}
         </div>
@@ -232,13 +205,13 @@ const GetCode = () => {
 
       {/* Right Side: Output */}
       <div className="w-full lg:w-1/2 rounded-lg bg-[#212121] border border-gray-700 p-4 shadow-md">
-        <h2 className="text-lg font-semibold mb-2">Live Output</h2>
-        <div className="flex mt-[150px] ml-[150px]">
+        
+        <div className="flex mt-[220px] lg:ml-[180px] max-sm: ml-[80px] ">
           <iframe
             srcDoc={combinedCode}
             title="Live Preview"
             sandbox="allow-scripts"
-            className="w-full h-[500px] "
+            className="w-full lg:h-[500px] max-sm: h-[300px]"
           />
         </div>
       </div>

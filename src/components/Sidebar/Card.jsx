@@ -104,7 +104,7 @@ const CustomCard = () => {
       onMouseLeave={() => setIsHovered(false)}
       
     >
-      <div className="lg:w-98 h-98 w-98 lg:h-98 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
+      <div className="lg:w-98 h-98 w-98 lg:h-98 border-2 border-purple-400 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
         <div 
         onMouseEnter={() => setIsButtonVisible(true)}
         onMouseLeave={() => setIsButtonVisible(false)}
@@ -127,20 +127,20 @@ const CustomCard = () => {
         </div>
 
         {/* Floating top-left buttons */}
-        <div className="flex lg:w-11/12 w-9/12 border-white lg:justify-between justify-center items-center max-sm:px-1 absolute top-2 left-3">
+        <div className="flex lg:w-11/12 w-full gap-x-[200px] lg:justify-between justify-center items-center max-sm:px-1 absolute top-2">
           {/* GetCode link - show on hover */}
           <div
-            className={`flex flex-row items-center gap-x-2 transition-all duration-200 ease-in-out ${
+            className={`flex flex-row items-start  gap-x-10 transition-all duration-200 ease-in-out ${
               isHovered ? "visible opacity-100" : "invisible opacity-0"
             }`}
           >
-            <Link to="/cart/getcode" className="flex items-center gap-x-2 text-white">
+            <Link to="/cart/getcode" className="flex items-center gap-x-2 text-white ">
               GetCode <FaCode size={20} />
             </Link>
           </div>
 
           {/* Save and Share Buttons */}
-          <div className="flex lg:gap-x-4 gap-x-1.5">
+          <div className="flex items-end lg:gap-x-4  gap-x-6 ">
             <button
               onClick={() => setSaved(!saved)}
               className="text-white hover:scale-110 transition-transform"

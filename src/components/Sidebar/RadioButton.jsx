@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Bookmark, BookmarkCheck, Share2 } from "lucide-react";
@@ -8,24 +7,44 @@ import { FaCode } from "react-icons/fa";
 const CustomCard = () => {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
-  const [enabled, setEnabled] = useState(false); // State for toggle button
+  const [selected, setSelected] = useState(0);
+
+const getBgPosition = (index) => {
+  if (index === selected) return "0px 0px";
+  if (index > selected) return "0px -24px";
+  return "0px 24px";
+};
 
   return (
     <div className="flex flex-col ">
-      <div className="lg:w-72  group h-44 w-44  lg:h-72 border-2 border-purple-400 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
-      <button
-        onClick={() => setEnabled(!enabled)}
-        className={`w-14 h-8 flex items-center rounded-full p-1 transition-colors duration-300 ${
-          enabled ? "bg-green-500" : "bg-gray-400"
-        }`}
-      >
-        <div
-          className={`w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
-            enabled ? "translate-x-6" : "translate-x-0"
-          }`}
-        />
-      </button>
-       <div className="flex lg:w-11/12 w-9/12 border-white  lg:justify-between justify-center items-center max-sm:px-1 absolute top-2">
+      <div className="lg:w-72  group h-44 w-44 border-2 border-purple-400 lg:h-72 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative">
+      <div className="flex flex-col items-start p-4">
+              {[0, 1, 2].map((i) => (
+                <button
+                  key={i}
+                  onClick={() => setSelected(i)}
+                  onMouseDown={(e) =>
+                    (e.currentTarget.style.transform = "scale(1.5)")
+                  }
+                  onMouseUp={(e) =>
+                    (e.currentTarget.style.transform = "scale(1)")
+                  }
+                  className="m-2 w-6 h-6 rounded-full cursor-pointer outline-none focus:outline-none"
+                  style={{
+                    WebkitAppearance: "none",
+                    boxShadow:
+                      "hsla(0,0%,100%,.15) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px",
+                    backgroundColor: "hsla(0,0%,0%,.2)",
+                    backgroundImage:
+                      "radial-gradient(hsla(200,100%,90%,1) 0%, hsla(200,100%,70%,1) 15%, hsla(200,100%,60%,.3) 28%, hsla(200,100%,30%,0) 70%)",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: getBgPosition(i),
+                    transition: "background-position 0.2s ease, transform 0.25s ease",
+                  }}
+                ></button>
+              ))}
+            </div>
+       <div className="flex lg:w-11/12 w-9/12 border-white  lg:justify-between justify-center items-center max-sm:px-1 absolute top-2 ">
        <div className=" flex flex-row items-center gap-x-2 invisible group-hover:visible transition-all duration-200 ease-in-out">
             <Link to="/cart/getcode" className="flex items-center gap-x-2">GetCode <FaCode size={20} /></Link>
         </div>
@@ -86,3 +105,8 @@ const CustomCardGrid = () => {
 };
 
 export default CustomCardGrid;
+
+
+
+
+

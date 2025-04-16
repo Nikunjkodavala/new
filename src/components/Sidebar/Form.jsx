@@ -151,7 +151,7 @@ const CustomCard = () => {
   return (
     <div>
         <div
-      className="lg:w-150 h-200 w-98 lg:h-130 bg-[#212121] overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative"
+      className="lg:w-150 h-200 w-98 lg:h-130 bg-[#212121] border-2 border-purple-400 overflow-hidden rounded-xl flex justify-center items-center p-4 shadow-lg relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -269,7 +269,7 @@ const CustomCard = () => {
 const CustomCardGrid = () => {
     return (
       <div className="min-h-screen mt-[53px] p-6 flex justify-center items-center">
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">
           {[...Array(30)].map((_, index) => (
             <CustomCard key={index} />
           ))}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 
 const ProjectCategories = () => {
@@ -12,6 +12,10 @@ const ProjectCategories = () => {
     { name: "Portfolio Site", color: "bg-teal-300", icon: "💻" },
     { name: "Food Delivery", color: "bg-purple-300", icon: "🍔" },
   ];
+
+  useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to top on component mount
+      }, []);
 
   return (
     <div className="mx-auto px-4 sm:px-6 lg:px-10 py-10 min-h-screen bg-black text-white">

@@ -67,11 +67,15 @@
 // export default Sidebar;
 
 
-import React from "react";
+import React, {useEffect} from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
   const location = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const navItems = [
     { name: "Buttons", href: "/cart/button" },
@@ -84,7 +88,7 @@ const Sidebar = () => {
     { name: "Radio Buttons", href: "/cart/radio" },
     { name: "Tooltips Button", href: "/cart/tooltip" },
     { name: "404 Pages", href: "/cart/404pages" },
-    { name: "Project Categories", href: "/cart/ProjectCategories" },
+    { name: "Project Categories", href: "/ProjectCategories" },
     { name: "Projects", href: "/Projects" },
   ];
 

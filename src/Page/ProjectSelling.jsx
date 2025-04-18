@@ -12,6 +12,7 @@ import {
   Code2,
   ShoppingCart,
 } from 'lucide-react';
+import { TbCurrencyRupee } from "react-icons/tb";
 
 
 
@@ -97,8 +98,8 @@ function ProjectSelling() {
                   <p className="text-gray-400 text-sm">One-time purchase</p>
                 </div>
                 <button className="bg-purple-600 hover:bg-purple-700 transition-colors px-6 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 shadow-lg shadow-purple-500/20">
-                  <ShoppingCart className="w-5 h-5" />
-                  Buy Now
+                <TbCurrencyRupee  className="w-5 h-5" />
+                  Pay Now
                 </button>
               </div>
             </div>

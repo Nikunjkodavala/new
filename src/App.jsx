@@ -6,6 +6,8 @@ import './App.css'
 import Ecomm from './components/Navbar/Ecomm';
 import HomePage from './Page/HomePage';
 import Footer from './components/Navbar/Footer';
+import AboutUs from './Page/AboutUs';
+import ContectUs from './Page/ContactUs';
 import Sidebar from './Page/Sidebar';
 import Buttons from './components/Sidebar/Buttons';
 import ProjectCategories from '../src/Page/ProjectCategories';
@@ -32,6 +34,8 @@ function App() {
         <Ecomm/>
         <Routes>
             <Route path='/' element={<HomePage/>} />
+            <Route path='/AboutUs' element={<AboutUs/>} />
+            <Route path='/ContactUs' element={<ContectUs/>} />
             <Route path='/Projects' element={<Projects/>} />
             <Route path='/ProjectSelling' element={<ProjectSellingPage/>} />
             <Route path='/ProjectCategories' element={<ProjectCategories/>} />

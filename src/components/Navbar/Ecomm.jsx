@@ -27,10 +27,10 @@ const Ecomm = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Components", href: "/cart" },
-    { name: "About Us", href: "#" },
     { name: "Projects", href: "/ProjectCategories" },
     { name: "Templates", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "About Us", href: "/Aboutus" },
+    { name: "Contact Us", href: "/ContactUs" },
   ];
 
   return (

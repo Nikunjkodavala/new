@@ -11,8 +11,8 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/",(req,res)=>{
-     res.send("WELCOME TO OUR CODE.");
+app.get("/",(req,res)=> {
+    res.send("WELCOME TO OUR CODE.");
 })
 
 app.listen(4000,function(){
@@ -30,27 +30,27 @@ function GuideStep({
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+        <div className="bg-black rounded-lg shadow-lg overflow-hidden">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full flex items-center justify-between p-6 hover:bg-gray-50 transition-all duration-300"
+                className="w-full flex items-center justify-between p-6 hover:bg-purple-800 transition-all duration-300"
             >
                 <div className="flex gap-4 items-center">
                     <div className="flex-shrink-0">
-                        <div className={`w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center transform transition-all duration-300 ${isOpen ? 'scale-110 bg-indigo-200' : ''}`}>
-                            <Icon className={`w-6 h-6 text-indigo-600 transition-all duration-300 ${isOpen ? 'scale-110' : ''}`} />
+                        <div className={`w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center transform transition-all duration-300 ${isOpen ? 'scale-110 bg-purple-700' : ''}`}>
+                            <Icon className={`w-6 h-6 text-white transition-all duration-300 ${isOpen ? 'scale-110' : ''}`} />
                         </div>
                     </div>
                     <div className="text-left">
-                        <h3 className={`text-xl font-semibold transition-colors duration-300 ${isOpen ? 'text-indigo-600' : 'text-gray-800'}`}>
+                        <h3 className={`text-xl font-semibold transition-colors duration-300 ${isOpen ? 'text-purple-400' : 'text-white'}`}>
                             {number}. {title}
                         </h3>
-                        <p className="text-gray-600 mt-1">{description}</p>
+                        <p className="text-gray-400 mt-1">{description}</p>
                     </div>
                 </div>
                 <div className={`transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
                     {isOpen ? (
-                        <ChevronUp className="w-6 h-6 text-indigo-600" />
+                        <ChevronUp className="w-6 h-6 text-purple-400" />
                     ) : (
                         <ChevronDown className="w-6 h-6 text-gray-400" />
                     )}
@@ -84,10 +84,10 @@ function GuideStep({
                                     transitionDelay: `${index * 100}ms`
                                 }}
                             >
-                                <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <span className="text-sm font-medium text-indigo-600">{index + 1}</span>
+                                <div className="w-6 h-6 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span className="text-sm font-medium text-white">{index + 1}</span>
                                 </div>
-                                <p className="text-gray-700">{step}</p>
+                                <p className="text-gray-300">{step}</p>
                             </li>
                         ))}
                     </ul>
@@ -174,15 +174,15 @@ const Backendsite = () => {
     ];
 
     return (
-        <div className="bg-sky-500 w-full">
+        <div className="bg-black text-white w-full">
             <div className="flex flex-col lg:flex-row justify-around items-center gap-10 px-5 py-10">
                 {/* Left Section */}
                 <div className="lg:w-[50%] flex flex-col gap-y-5 text-center lg:text-left">
-                    <h1 className="text-3xl tracking-wide font-bold text-white">Easy To Use Backendsite Code & Zero Logical Error</h1>
-                    <p className="max-w-3xl mx-auto text-white">
+                    <h1 className="text-3xl tracking-wide font-bold text-purple-400">Easy To Use Backendsite Code & Zero Logical Error</h1>
+                    <p className="max-w-3xl mx-auto text-gray-300">
                         An easy-to-use backend site should have a clean architecture, proper error handling, and optimized database queries to ensure zero logical errors. It should be built using reliable frameworks like Node.js (Express), Django, or Laravel, with authentication, API documentation, and automated testing for smooth performance.
                     </p>
-                    <button className="p-3 px-5 bg-white text-black rounded-lg">We will help</button>
+                    <button className="p-3 px-5 bg-purple-500 text-black rounded-lg hover:bg-purple-600">We will help</button>
                 </div>
                 {/* Right Section */}
                 <div className="w-full lg:w-[50%] flex justify-center">
@@ -191,7 +191,7 @@ const Backendsite = () => {
             </div>
 
             {/* Guide Steps Section */}
-            <div className="bg-sky-400">
+            <div className="bg-purple-800">
                 <div className="text-start w-full px-4 py-12 space-y-10 mx-auto max-w-screen-lg">
                     <h1 className="text-3xl text-yellow-200">1) Basic Program Front of You in Node.js</h1>
                     <SyntaxHighlighter style={atelierCaveDark} wrapLongLines customStyle={{ borderRadius: "5px", padding: "20px" }}>
@@ -202,12 +202,12 @@ const Backendsite = () => {
             </div>
 
             {/* Steps List Section */}
-            <div className="bg-gray-50 py-12">
+            <div className="bg-gradient-to-br from-black via-purple-950 to-purple-900 py-12">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                    <h1 className="text-4xl font-bold text-purple-400 mb-4">
                         Building Node.js Web Applications
                     </h1>
-                    <p className="text-xl text-gray-600">
+                    <p className="text-xl text-gray-300">
                         A comprehensive guide to creating responsive and scalable web applications with Node.js. Click each step to learn more.
                     </p>
                 </div>

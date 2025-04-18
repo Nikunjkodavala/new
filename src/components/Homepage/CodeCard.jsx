@@ -1,10 +1,9 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { IoMdClose, IoMdRemove } from "react-icons/io";
-import { MdOutlineCropSquare } from "react-icons/md";
-import Homenav from "../../assets/Navabr_Image/HomepageNav.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import Homenav from "../../assets/Navabr_Image/HomepageNav.png";
+import { Link } from "react-router-dom";
 
 const Custom = () => {
     const codeString = `import React from "react";
@@ -49,89 +48,64 @@ const Ecomm = () => {
   );
 };
 
-export default Ecomm;
-`;
+export default Ecomm;`;
 
     return (
-        <>
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-[80px] border-2 border-red-500">
-                <div className="w-full lg:w-[650px] sm:w-[200px] ">
-                    {/* Code Editor Container */}
-                    <div className="w-full  bg-gradient-to-br from-purple-900 to-black text-white rounded-lg shadow-lg">
-                        {/* Title Bar */}
-                        <div className="flex justify-between items-center px-4 py-2 bg-purple-800 rounded-t-lg ">
-                            <span className="text-sm text-gray-300">Code Editor</span>
-                        </div>
+        <div className="w-full px-4 py-10 bg-gradient-to-br from-black via-purple-950 to-purple-800 text-white">
+            {/* Code Editor Dual Panels */}
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-[80px]">
+                {[1, 2].map((_, idx) => (
+                    <div key={idx} className="w-full lg:w-[650px]">
+                        <div className="w-full bg-gradient-to-br from-purple-900 to-black text-white rounded-lg shadow-lg">
+                            {/* Title Bar */}
+                            <div className="flex justify-between items-center px-4 py-2 bg-purple-800 rounded-t-lg">
+                                <span className="text-sm text-gray-300">Code Editor</span>
+                            </div>
 
-                        {/* Code Block */}
-                        <div className="overflow-y-auto max-h-[700px]    scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900 p-3">
-                            <SyntaxHighlighter
-                                language="cpp"
-                                style={dracula}
-                                showLineNumbers
-                                customStyle={{
-                                    borderRadius: "5px",
-                                    padding: "15px",
-                                    fontSize: "14px",
-                                    
-                                }}
-                            >
-                                {codeString}
-                            </SyntaxHighlighter>
+                            {/* Code Block */}
+                            <div className="overflow-y-auto max-h-[700px] scrollbar-thin scrollbar-thumb-purple-700 scrollbar-track-black p-3">
+                                <SyntaxHighlighter
+                                    language="jsx"
+                                    style={dracula}
+                                    showLineNumbers
+                                    customStyle={{
+                                        borderRadius: "5px",
+                                        padding: "15px",
+                                        fontSize: "14px",
+                                        background: "transparent"
+                                    }}
+                                >
+                                    {codeString}
+                                </SyntaxHighlighter>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div className="w-full lg:w-[650px]">
-                    {/* Code Editor Container */}
-                    <div className="w-full bg-gradient-to-br from-purple-900 to-black text-white rounded-lg shadow-lg">
-                        {/* Title Bar */}
-                        <div className="flex justify-between items-center px-4 py-2 bg-purple-800 rounded-t-lg">
-                            <span className="text-sm text-gray-300">Code Editor</span>
-                        </div>
-
-                        {/* Code Block */}
-                        <div className="overflow-y-auto max-h-[700px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900 p-3">
-                            <SyntaxHighlighter
-                                language="cpp"
-                                style={dracula}
-                                showLineNumbers
-                                customStyle={{
-                                    borderRadius: "5px",
-                                    padding: "15px",
-                                    fontSize: "14px",
-                                }}
-                            >
-                                {codeString}
-                            </SyntaxHighlighter>
-                        </div>
-                    </div>
-                </div>
+                ))}
             </div>
 
-            <div className="flex flex-col gap-y-5 w-full lg:w-[900px] mt-10 bg-white py-10 px-5 lg:px-10 rounded-lg shadow-lg shadow-purple-400 mx-auto">
-                <h1 className="text-xl text-gray-900 tracking-wide font-semibold font-serif">
+            {/* Output Preview */}
+            <div className="flex flex-col gap-y-5 w-full lg:w-[900px] mt-16 bg-purple-900 border border-purple-400 py-10 px-5 lg:px-10 rounded-lg shadow-xl mx-auto">
+                <h1 className="text-xl text-purple-100 tracking-wide font-semibold font-serif">
                     Output 
                 </h1>
                 <img
                     src={Homenav}
                     alt="Component Output"
-                    className="rounded-lg shadow-md"
+                    className="rounded-lg shadow-md border border-purple-700"
                 />
             </div>
-            
+
             {/* Buttons */}
-            <div className="flex flex-col lg:flex-row gap-y-5 lg:gap-x-5 mx-auto mt-10 w-full lg:w-auto">
-                <button className="text-xl tracking-wide flex items-center underline gap-x-1.5 underline-offset-8 cursor-pointer text-white w-full lg:w-auto">
-                    Try another component <IoIosArrowRoundForward size={30} className="mt-0.5"/>
+            <div className="flex  lg:flex-row gap-y-5 lg:gap-x-5 mx-auto mt-10 w-full lg:w-auto items-center justify-center">
+                <Link to="/cart">
+                <button className="text-xl tracking-wide flex items-center underline gap-x-1.5 underline-offset-8 cursor-pointer text-purple-200 hover:text-white transition-all">
+                    Try another component <IoIosArrowRoundForward size={30} className="mt-0.5" />
                 </button>
-                <button className="text-xl tracking-wide text-purple-700 font-medium hover:bg-black border py-2 px-5 bg-white rounded-xl cursor-pointer w-full lg:w-auto">
-                    Easy to use
-                </button>
+            
+                </Link>
             </div>
-        </>
+        </div>
     );
 };
 
 export default Custom;
-

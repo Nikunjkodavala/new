@@ -83,15 +83,15 @@ const Sidebar = () => {
     { name: "Inputs", href: "/cart/input" },
     { name: "Radio Buttons", href: "/cart/radio" },
     { name: "Tooltips Button", href: "/cart/tooltip" },
-    { name: "404 Pages", href: "/cart/tooltip" },
+    { name: "404 Pages", href: "/cart/404pages" },
     { name: "Project Categories", href: "/cart/ProjectCategories" },
     { name: "Projects", href: "/Projects" },
   ];
 
   return (
-    <div className="flex flex-col md:flex-row w-full">
+    <div className="flex flex-col md:flex-row w-full bg-black">
       {/* ✅ Mobile horizontal tabs */}
-      <div className="md:hidden flex overflow-x-auto  space-x-2 px-2 py-3 bg-gray-900 border-b border-purple-700 scrollbar-thin scrollbar-thumb-purple-600 scrollbar-track-gray-800">
+      <div className="md:hidden flex overflow-x-auto  space-x-2 px-2 py-3 bg-black border-b border-purple-700 ">
         {navItems.map((item) => (
           <Link
             key={item.name}
@@ -108,7 +108,7 @@ const Sidebar = () => {
       </div>
 
       {/* ✅ Desktop sidebar */}
-      <div className="hidden md:block w-[250px] bg-gray-900  text-white border-r-2 border-purple-700 min-h-screen sticky top-[72px] self-start">
+      <div className="hidden md:block w-[250px] bg-black  text-white border-r-2 border-purple-700 rounded-r-4xl shadow-8xl min-h-screen sticky top-[72px] self-start">
         <div className="p-4 border-b border-purple-500 font-bold text-lg">
           Sidebar
         </div>

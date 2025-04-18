@@ -73,7 +73,7 @@ exports.incrementLikeAndView = async (req, res) => {
 
 exports.getAllButtons = async (req, res) => {
     try {
-        const buttons = await MagicButton.find();
+        const buttons = await MagicButton.find({});
 
         if (!buttons || buttons.length === 0) {
             return res.status(404).json({

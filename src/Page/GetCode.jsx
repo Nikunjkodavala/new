@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { use, useState, useEffect } from "react";
 import { RiHtml5Fill } from "react-icons/ri";
 import { FaCss3 } from "react-icons/fa6";
 import { SiReact } from "react-icons/si";
@@ -150,6 +150,10 @@ const GetCode = () => {
         ? "bg-gray-800 text-white shadow"
         : "bg-gray-600 text-gray-300 hover:bg-gray-700"
     }`;
+
+    useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to top on component mount
+    }, []);
 
   return (
     <div className="flex flex-col lg:flex-row gap-6 p-4 lg:h-[750px]  text-white ">

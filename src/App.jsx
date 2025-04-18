@@ -10,6 +10,7 @@ import Sidebar from './Page/Sidebar';
 import Buttons from './components/Sidebar/Buttons';
 import ProjectCategories from '../src/Page/ProjectCategories';
 import Projects from '../src/Page/Projects';
+import ProjectSellingPage  from './Page/ProjectSelling';
 import GetCode from './Page/GetCode';
 import Checkbox from './components/Sidebar/Checkbox';
 import ToggelButton from './components/Sidebar/ToggelButton';
@@ -19,6 +20,7 @@ import Form from './components/Sidebar/Form';
 import Inputs from './components/Sidebar/Inputs';
 import RadioButton from './components/Sidebar/RadioButton'
 import ToolTips from './components/Sidebar/ToolTips';
+import NotFoundPages from './components/Sidebar/404Pages';
 
 
 
@@ -31,6 +33,8 @@ function App() {
         <Routes>
             <Route path='/' element={<HomePage/>} />
             <Route path='/Projects' element={<Projects/>} />
+            <Route path='/ProjectSelling' element={<ProjectSellingPage/>} />
+            <Route path='/ProjectCategories' element={<ProjectCategories/>} />
             <Route path='/cart' element={<Sidebar/>} >
                 <Route path='button' element={<Buttons/>} />
                 <Route path='checkbox' element={<Checkbox/>} />
@@ -41,8 +45,8 @@ function App() {
                 <Route path='input' element={<Inputs/>} />
                 <Route path='radio' element={<RadioButton/>} />
                 <Route path='tooltip' element={<ToolTips/>} />
+                <Route path='404pages' element={<NotFoundPages/>} />
                 <Route path='getcode' element={<GetCode/>} />
-                <Route path='ProjectCategories' element={<ProjectCategories/>} />
                 <Route path="side" element={<Sidebar/>} />
             </Route>
         </Routes>

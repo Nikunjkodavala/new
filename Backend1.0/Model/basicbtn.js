@@ -26,7 +26,7 @@ const magicbuttonSchema = new mongoose.Schema({
     },
     Like:{
         type: Number,
-        default: 0
+        default: 0,
     },
     View:{
         type:Number,

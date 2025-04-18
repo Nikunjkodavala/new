@@ -28,14 +28,14 @@ const CollageProject = () => {
 
         {/* Offer Text */}
         <p className="flex items-center justify-center gap-x-2 text-purple-200 font-medium">
-          One Project buy + <span className="text-purple-400 font-semibold">one mini project Free</span>
+          Buy one Project  + <span className="text-purple-400 font-semibold">one mini project Free</span>
           <RiVerifiedBadgeFill className="text-purple-400" />
         </p>
 
         {/* CTA Button */}
         <div>
           <Link to="/ProjectCategories">
-            <button type="button" className="px-6 py-2 bg-purple-600 hover:bg-purple-700 transition rounded-lg text-white shadow-md mt-4">
+            <button type="button" className="px-6 py-2 bg-purple-600 hover:bg-purple-700 transition rounded-lg cursor-pointer text-white shadow-md mt-4">
               Buy Now
             </button>
           </Link>

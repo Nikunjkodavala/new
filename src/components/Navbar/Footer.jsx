@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
 
 const footer = [
   { title: 'Home', navigate: '/' },
@@ -29,6 +30,14 @@ const Footer = () => {
           <p className='text-sm text-gray-300'>
             We specialize in crafting custom buttons, navbars, and footers tailored to your design and functionality needs. Our solutions ensure seamless integration, responsiveness, and modern aesthetics.
           </p>
+
+          {/* Social Icons (Desktop) */}
+
+        <div className="hidden md:flex gap-x-8 text-purple-300">
+          <FaFacebook className="cursor-pointer hover:text-purple-500 transition" size={24} />
+          <FaTwitter className="cursor-pointer hover:text-purple-500 transition" size={24} />
+          <FaInstagram className="cursor-pointer hover:text-purple-500 transition" size={24} />
+        </div>
         </div>
 
         {/* Our Services */}

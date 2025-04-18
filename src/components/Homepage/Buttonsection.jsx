@@ -54,9 +54,9 @@ const Buttonsection = () => {
           <p className="text-purple-100 text-base leading-relaxed max-w-3xl">
             We specialize in crafting custom buttons with stunning colors and unique designs to enhance your website's aesthetics. Our creations blend functionality with eye-catching visuals, ensuring seamless user experiences. Elevate your brand with beautifully designed UI elements tailored to your needs.
           </p>
-          <button className="flex items-center gap-x-2 mt-3 text-purple-300 hover:text-yellow-300 transition">
-            <Link to="/cart">
-            View all Buttons <IoMdArrowForward size={20} />
+          <button className="flex items-center gap-x-2 mt-3  text-purple-300 hover:text-yellow-300 transition">
+            <Link to="/cart" className='flex items-center gap-x-2'>
+            View all Buttons <IoMdArrowForward size={20} className="flex mt-0.5" />
             </Link>
           </button>
 

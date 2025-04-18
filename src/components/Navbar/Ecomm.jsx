@@ -30,16 +30,16 @@ const Ecomm = () => {
     { name: "Projects", href: "/ProjectCategories" },
     { name: "Templates", href: "#" },
     { name: "About Us", href: "/Aboutus" },
-    { name: "Contact Us", href: "/ContactUs" },
+    { name: "Contact Us", href: "/Contactus" },
   ];
 
   return (
     <div className={`sticky top-0 w-full z-[50] transition-colors duration-300 border-b  bg-black shadow-md text-purple-400`}>
       <div className="w-11/12 mx-auto flex justify-between items-center py-4 relative">
         {/* Logo */}
-        <a href="/">
-          <h1 className="text-2xl font-bold text-purple-500">LOGO</h1>
-        </a>
+        <Link to="/">
+          <h1 className="text-2xl font-bold text-purple-500">UIgalaxy</h1>
+          </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-x-8 font-medium text-purple-300">

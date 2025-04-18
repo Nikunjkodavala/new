@@ -1,6 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 const ContactUs = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
   return (
     <div className="min-h-screen bg-black text-white px-6 py-12">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">

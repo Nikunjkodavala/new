@@ -1,6 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 const AboutUs = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
   return (
     <div className="min-h-screen bg-black text-white px-6 py-10">
       <div className="max-w-4xl mx-auto text-center">
@@ -16,6 +21,7 @@ const AboutUs = () => {
               Access a growing library of beautiful buttons, form designs, navigation bars, modals, and complete pages. All are built with React and Tailwind CSS in a stunning purple-black theme.
             </p>
           </div>
+          
 
           <div className="bg-purple-900/20 border border-purple-800 p-6 rounded-2xl shadow-md">
             <h2 className="text-xl font-semibold text-purple-400 mb-2">📚 Projects for College Students</h2>

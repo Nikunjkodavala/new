@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
-import { SiVite } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import ViteIcon from '../assets/Vite.svg';
+import { SiReact } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { MdDashboardCustomize } from "react-icons/md";
 import { FaPlugCircleXmark } from "react-icons/fa6";
-import Custom from '../components/Homepage/Custom';
 import CollageProject from '../components/Homepage/CollageProject';
 import Buttonsection from '../components/Homepage/Buttonsection';
 import Carthome from '../components/Homepage/Carthome';
@@ -32,18 +32,18 @@ const HomePage = () => {
 
           {/* CTA & Tech Icons */}
           <div className='flex flex-col sm:flex-row items-center gap-x-10 mt-6'>
-            <a href="/cart">
+            <Link to="/cart">
               <button
                 type="button"
                 className='py-2 flex items-center gap-x-3 px-6 cursor-pointer border border-purple-400 rounded-md bg-purple-600 hover:bg-purple-700 text-white uppercase tracking-wide shadow-md transition'
               >
                 <MdDashboardCustomize size={30}/> Use our Components
               </button>
-            </a>
+            </Link>
             <div className='flex gap-x-5 mt-5 sm:mt-0 text-purple-300'>
-              <span><FaReact size={30}/></span>
-              <span><RiTailwindCssFill size={30}/></span>
-              <span><SiVite size={30}/></span>
+              <span><SiReact size={30} className="flex  text-[#61DBFB]" /></span>
+              <span><RiTailwindCssFill size={30} className="flex  text-sky-400" /></span>
+              <span><img src={ViteIcon} alt="" className="w-8 h-8 "/></span>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 {
   "name": "vite-project",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,10 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
-<<<<<<< HEAD
     "axios": "^1.8.4",
-=======
->>>>>>> backend/ankur
     "html-react-parser": "^5.2.3",
     "lucide-react": "^0.484.0",
     "prettier": "^3.5.3",

@@ -58,7 +58,7 @@
 
 
 import React from 'react';
-import { SiVite } from "react-icons/si";
+import { SiReact } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { MdDashboardCustomize } from "react-icons/md";
@@ -68,6 +68,9 @@ import Buttonsection from '../components/Homepage/Buttonsection';
 import Carthome from '../components/Homepage/Carthome';
 import Backendsite from '../components/Homepage/Backendsite';
 import CodeCard from '../components/Homepage/CodeCard';
+import { Link } from 'react-router-dom';
+import ViteIcon from '../assets/Vite.svg';
+
 
 
 const HomePage = () => {

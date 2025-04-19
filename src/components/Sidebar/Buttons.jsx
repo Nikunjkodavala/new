@@ -4,11 +4,25 @@ import { Bookmark, BookmarkCheck, Share2 } from "lucide-react";
 import { AiFillLike, AiOutlineLike } from "react-icons/ai";
 import { FaCode } from "react-icons/fa";
 import { getbasicbtn } from "../../Connecter/Hendler/custombutton";
+import { likeviewbtn } from "../../Connecter/Hendler/custombutton";
 import parse from 'html-react-parser';
 
 const CustomCard = ({items}) => {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [likeincrement, setLikeincrement] = useState(0);
+  const [viewincrement, setViewincrement] = useState(0);
+
+  const onLike = async () => {
+    try {
+      const response = await likeviewbtn(items._id);
+      console.log("Like and view incremented successfully:", response);
+      setLikeincrement(response.data.Like)
+      setViewincrement(response.data.View)
+    } catch (error) {
+      console.error("Error incrementing like and view:", error);
+    }
+  };
   
   //  const string = `<button className="bg-gradient-to-b from-cyan-400 to-cyan-700 text-white px-6 py-2 rounded-lg shadow-md font-semibold hover:opacity-90 transition">Button</button>`;
   return (
@@ -57,18 +71,18 @@ const CustomCard = ({items}) => {
       <div className="flex flex-row justify-between gap-x-6 items-center mt-4 px-2">
         {/* Like Button */}
         <button
-          onClick={() => setLiked(!liked)}
+          onClick={() => onLike(!likeincrement)}
           className={`transition-all  flex hover:scale-110 gap-x-2 ${
-            liked ? "text-blue-600" : "text-white"
+            likeincrement ? "text-blue-600" : "text-white"
           }`}
           title="Like"
         >
-          {liked ? <AiFillLike size={22} /> : <AiOutlineLike size={22} />}
-          <span className="text-sm font-semibold flex justify-center items-center  ">{items.Like}</span>
+          {likeincrement ? <AiFillLike size={22} /> : <AiOutlineLike size={22} />}
+          <span className="text-sm font-semibold flex justify-center items-center ">{likeincrement}</span>
         </button>
 
         <h3 className="text-md font-semibold text-white">Card Title</h3>
-        <h3 className="text-md font-semibold text-white">110 Views</h3>
+        <h3 className="text-md font-semibold text-white">{viewincrement} Views</h3>
       </div>
     </div>
   );

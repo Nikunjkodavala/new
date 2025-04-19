@@ -31,3 +31,18 @@ export const getbasicbtn = async () => {
        
     }
 }
+
+export const likeviewbtn = async (id) => {
+    try {
+        const response = await Powerconnecter("POST",BUTTON_API_ENDPOINT.LIKE_VIEW_API_URL.replace(':id', id),null);
+        if(!response.data.success){ 
+           throw new Error(response.data.message);
+        }
+        console.log("btn apitest", response.data);
+        return response.data;
+    }
+    catch (error) {
+        console.log("Error in getbasicbtn:", error);
+       
+    }
+}

@@ -37,6 +37,7 @@ exports.basicbuttom = async (req, res) => {
 exports.incrementLikeAndView = async (req, res) => {
     try {
         const { id } = req.params;
+        console.log("params ID..",id)
         if (!id) {
             return res.status(400).json({
                 success: false,
@@ -52,8 +53,8 @@ exports.incrementLikeAndView = async (req, res) => {
             });
         }
 
-        magicbutton.likes = (magicbutton.likes || 0) + 1;
-        magicbutton.views = (magicbutton.views || 0) + 1;
+        magicbutton.Like = (magicbutton.Like || 0) + 1;
+        magicbutton.View = (magicbutton.View || 0) + 1;
 
         await magicbutton.save();
 

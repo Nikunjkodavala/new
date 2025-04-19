@@ -5,6 +5,6 @@ const { basicbuttom, incrementLikeAndView, getAllButtons } = require('../control
 
 router.post('/basicbutton', basicbuttom);
 router.get('/getbasicbutton',getAllButtons);
-router.post('/like-view',incrementLikeAndView)
+router.post('/like-view/:id',incrementLikeAndView)
 
 exports.ButtonRouter = router;

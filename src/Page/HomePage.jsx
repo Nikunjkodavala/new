@@ -33,7 +33,7 @@
 //             </div>
 //             <div className='my-10'>
 //                 <div className='flex flex-col items-center gap-y-3'>
-//                      <div className=' px-5 py-5 flex w-fit items-center  bg-yellow-400/60 rounded-3xl border-white'><FaPlugCircleXmark size={55}/></div>
+import parse from 'html-react-parser'//                      <div className=' px-5 py-5 flex w-fit items-center  bg-yellow-400/60 rounded-3xl border-white'><FaPlugCircleXmark size={55}/></div>
 //                      <span className=' text-2xl tracking-wide text-yellow-50'>Without Plugin use components code</span>
 //                      <p className=' max-w-3xl '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facilis officiis obcaecati reiciendis alias quis et quisquam placeat illo perferendis voluptate dolor, repellendus veniam possimus debitis dolorem quae voluptates! Quae, maxime molestiae?</p>
 //                 </div>
@@ -65,9 +65,12 @@ import Carthome from '../components/Homepage/Carthome';
 import Backendsite from '../components/Homepage/Backendsite';
 import CodeCard from '../components/Homepage/CodeCard';
 
+
 const HomePage = () => {
+    
   return (
     <div className='w-full bg-gradient-to-t to-purple-600 from-black text-white'>
+      
         <div className='flex flex-col items-center text-center'>
             
             <div className='mx-auto flex flex-col items-center gap-y-5 my-22 px-5'>
